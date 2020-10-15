@@ -1,0 +1,12 @@
+Navigation
+==========
+
+Viewport
+--------
+
+Hold Left Click
+^^^^^^^^^^^^^^^
+
+ * Left and right to look around.
+ * Forward and backwards to walk.
+

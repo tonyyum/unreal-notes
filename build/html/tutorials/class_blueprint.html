@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blueprint Class &#8212; Unreal Engine Notes 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Level Blueprint" href="level_blueprint.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="blueprint-class">
+<h1>Blueprint Class<a class="headerlink" href="#blueprint-class" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-blueprint-class">
+<h2>Creating Blueprint Class<a class="headerlink" href="#creating-blueprint-class" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="from-empty">
+<h3>From empty<a class="headerlink" href="#from-empty" title="Permalink to this headline">¶</a></h3>
+<p>Option 1 (Recommended)</p>
+<p>Form <cite>Content Browser</cite> Create a folder <cite>Blueprint</cite> and in it right-click and select <cite>Blue Print</cite></p>
+<img alt="../_images/blueprint_class_from_content_browser.png" src="../_images/blueprint_class_from_content_browser.png" />
+<p>Option 2</p>
+<p>In the <cite>Blueprints</cite> dropdown, select <cite>New Empty Blueprint Class</cite></p>
+<p>Either way you would be presented with option for parent class. Choose <cite>Actor</cite></p>
+<img alt="../_images/blueprint_parent_class.png" src="../_images/blueprint_parent_class.png" />
+</div>
+<div class="section" id="from-selected-object">
+<h3>From selected object<a class="headerlink" href="#from-selected-object" title="Permalink to this headline">¶</a></h3>
+<p>Select an object and click on <cite>Blueprint/Add Script</cite> on the World Outliner.</p>
+<img alt="../_images/convert_obj_to_blueprint_class.png" src="../_images/convert_obj_to_blueprint_class.png" />
+<p>OR</p>
+<p>From the blueprint dropdown, select <cite>Convert Selection to Blueprint Class</cite></p>
+<img alt="../_images/convert_selectoin_to_blueprint_class.png" src="../_images/convert_selectoin_to_blueprint_class.png" />
+</div>
+</div>
+<div class="section" id="add-components">
+<h2>Add Components<a class="headerlink" href="#add-components" title="Permalink to this headline">¶</a></h2>
+<p>From the component window (top left), click <cite>+ Add Component</cite> and use search to find what you need.</p>
+<img alt="../_images/add_component_to_blueprint_class.png" src="../_images/add_component_to_blueprint_class.png" />
+<p>Example:</p>
+<dl>
+<dt>Box Collision</dt><dd><p>Can be used as a trigger. Let’s name it <em>Trigger</em></p>
+</dd>
+<dt>Text Render</dt><dd><blockquote>
+<div><p>Used for displaying text</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Drag the exec out of text and select <cite>Toggle Visibility</cite></p></li>
+<li><p>Connect Enable input and Disable input to <cite>Toggle Visibility</cite></p></li>
+<li><p>Connect <cite>On Component Begin Overlap</cite> and <cite>On Component End Overlap</cite> to <cite>Exec</cite> of <cite>Enabled Input</cite> and <cite>Disabled Input</cite> respectively</p></li>
+<li><p>Connect <cite>Get Player Contrller</cite> to <cite>Player Controller</cite> of <cite>Enable Input</cite> and <cite>Disable Input</cite></p></li>
+</ul>
+<p>And the rest… Just see the final example.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="duplicate-blueprint-class">
+<h2>Duplicate Blueprint Class<a class="headerlink" href="#duplicate-blueprint-class" title="Permalink to this headline">¶</a></h2>
+<p>Alt and drag object to duplicate it in the view port.</p>
+</div>
+<div class="section" id="player-controller">
+<h2>Player Controller<a class="headerlink" href="#player-controller" title="Permalink to this headline">¶</a></h2>
+<p>Insert <cite>Get Player Controller</cite></p>
+<p>Insert <cite>Keyboard Event F</cite></p>
+<img alt="../_images/insert_keyboard_event_f_key.png" src="../_images/insert_keyboard_event_f_key.png" />
+</div>
+<div class="section" id="debug">
+<h2>Debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
+<p>You debug only one instance of Blueprint class at a time.</p>
+<p>To see them. Change the instance at the top-right of the toolbar.</p>
+<img alt="../_images/debugging_instances_of_blueprint_class.png" src="../_images/debugging_instances_of_blueprint_class.png" />
+</div>
+<div class="section" id="grouping">
+<h2>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Left-click and drag to select nodes</p></li>
+<li><p>Press <cite>c</cite> to group and add comment</p></li>
+<li><p>Tip: change colour on <cite>Comment Color</cite> in the <cite>Details</cite> panel</p></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/blueprint_class_example.png" src="../_images/blueprint_class_example.png" />
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="when-running-game">
+<h3>When running game<a class="headerlink" href="#when-running-game" title="Permalink to this headline">¶</a></h3>
+<p>Shift-F1 to regain mouse control</p>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=EmvekeKk-0o&amp;t=537s">https://www.youtube.com/watch?v=EmvekeKk-0o&amp;t=537s</a></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Unreal Engine Notes</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../viewport.html">Viewport</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="building_stage.html">Building a stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level_blueprint.html">Level Blueprint</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Blueprint Class</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="contents.html">Tutorials</a><ul>
+      <li>Previous: <a href="level_blueprint.html" title="previous chapter">Level Blueprint</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Tony Yum.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorials/class_blueprint.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
