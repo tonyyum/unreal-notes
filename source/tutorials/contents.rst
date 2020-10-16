@@ -7,3 +7,6 @@ Tutorials
    building_stage
    level_blueprint
    class_blueprint
+   construction_script
+   level_editor_component_workflow
+   using_loops.rst
