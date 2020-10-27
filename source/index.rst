@@ -8,6 +8,7 @@ Notes on Unreal Engine
    viewport
    tutorials/contents
    changing_mesh
+   procedural_mesh
 
 Don't forget to check out the official docs:
 
