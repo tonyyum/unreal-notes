@@ -12,3 +12,4 @@ Tutorials
    using_loops.rst
    loops_in_level_design.rst
    beam_partical
+   blueprint_to_cpp/contents
