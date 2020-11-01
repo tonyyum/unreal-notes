@@ -10,3 +10,4 @@ Blueprint to C++
    exposing_variables
    ufunciton
    mapping_blueprint_to_cpp
+   blueprint_events_to_cpp
