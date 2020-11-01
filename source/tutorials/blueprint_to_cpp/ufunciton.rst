@@ -75,6 +75,13 @@ Ctrl+. and create definition.
 
 Also tip: Ctrl-K Ctrl-O to swtich between .cpp and .h
 
+Add the #include:
+
+.. code-block:: cpp
+
+    #include "Kismet/KismetMathLibrary.h"
+
+
 Add the code:
 
 .. code-block:: cpp
@@ -83,6 +90,7 @@ Add the code:
     {
         return GetComponentLocation() + UKismetMathLibrary::GetForwardVector(GetComponentRotation()) * MaxGrabDistance;
     }
+
 
 Ctrl-Shift-B to compile and we'll see the blueprint now complains because grabber already exists.
 

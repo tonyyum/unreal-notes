@@ -9,3 +9,4 @@ Blueprint to C++
    lifecycle_methods
    exposing_variables
    ufunciton
+   mapping_blueprint_to_cpp
