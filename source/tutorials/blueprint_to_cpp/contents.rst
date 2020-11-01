@@ -11,3 +11,4 @@ Blueprint to C++
    ufunciton
    mapping_blueprint_to_cpp
    blueprint_events_to_cpp
+   converting_blueprint_structs
