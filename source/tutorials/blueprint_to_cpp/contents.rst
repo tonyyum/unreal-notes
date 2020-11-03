@@ -13,3 +13,4 @@ Blueprint to C++
    blueprint_events_to_cpp
    converting_blueprint_structs
    complete_quest
+   creating_component_in_cpp
