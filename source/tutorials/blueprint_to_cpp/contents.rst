@@ -14,3 +14,4 @@ Blueprint to C++
    converting_blueprint_structs
    complete_quest
    creating_component_in_cpp
+   refresh_visibility
