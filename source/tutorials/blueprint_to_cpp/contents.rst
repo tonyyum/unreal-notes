@@ -15,3 +15,6 @@ Blueprint to C++
    complete_quest
    creating_component_in_cpp
    refresh_visibility
+   declaring_delegates_for_blueprint
+   boradcasting_subscribe_in_cpp
+   binding_user_input
